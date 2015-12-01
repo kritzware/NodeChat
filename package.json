@@ -1,0 +1,22 @@
+{
+  "name": "louis",
+  "version": "1.0.0",
+  "description": "An online chat client that runs with node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LouisBluhm/NodeChat.git"
+  },
+  "author": "louis bluhm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LouisBluhm/NodeChat/issues"
+  },
+  "homepage": "https://github.com/LouisBluhm/NodeChat#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
