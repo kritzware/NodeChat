@@ -5,19 +5,28 @@
 	    <style>
 	    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 	      * { margin: 0; padding: 0; box-sizing: border-box; }
-	      body { font: 13px 'Open Sans'; }
-	      form { background: white; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+	      body {
+	      	font: 13px 'Open Sans';
+	      	background-color: #202020;
+	      	color: #00FF00;
+	      }
+	      form { 
+	      	padding: 3px; 
+	      	position: fixed; 
+	      	bottom: 0; 
+	      	width: 100%; 
+	      }
 	      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; color: #00FF00; background-color: black;}
-	      form button { width: 9%; background-color: #191000; border: none; padding: 10px; color: white;}
-	      #messages { list-style-type: none; margin: 0; padding: 0; }
+	      form button { width: 9%; background-color: #EE0000; border: 1px solid #EE0000; padding: 10px; color: white;}
+	      #messages { list-style-type: none; margin: 0; padding: 0;}
 	      #messages li { padding: 5px 10px; }
-	      #messages li:nth-child(odd) { background: #eee; }
+	      #messages li:nth-child(odd) { background: #303030; }
 	    </style>
 	  </head>
   	<body>
 	    <ul id="messages"></ul>
 	    <form action="">
-	      <input id="m" autocomplete="off" /><button>Send</button>
+	      <input id="m" autocomplete="off" tabindex="0" placeholder="Enter message here!"/><button>Send</button>
 	    </form>
 
     <script src="/socket.io/socket.io.js"></script>
