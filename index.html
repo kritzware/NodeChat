@@ -18,8 +18,8 @@
 	      }
 	      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; color: #00FF00; background-color: black;}
 	      form button { width: 9%; background-color: #EE0000; border: 1px solid #EE0000; padding: 10px; color: white;}
-	      #messages { list-style-type: none; margin: 0; padding: 0;}
-	      #messages li { padding: 5px 10px; }
+	      #messages { list-style-type: none; margin: 0; padding: 0; font-style: bold; overflow: hidden;}
+	      #messages li { padding: 5px 10px; font-weight: 500px;}
 	      #messages li:nth-child(odd) { background: #303030; }
 	    </style>
 	  </head>
@@ -34,7 +34,6 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
      var userName = window.prompt("Enter your username: ");
-     var name = userName.bold();
      console.log(userName);
     	var socket = io();
     	$('form').submit(function() {
@@ -43,22 +42,11 @@
     		return false;
     	});
     	socket.on('chat message', function(msg) {
-    		$('#messages').append($('<li>').text(name + ": " + msg));
+    		$('#messages').append($('<li>').text(userName + ": " + msg));
     	});
     </script>
   	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
