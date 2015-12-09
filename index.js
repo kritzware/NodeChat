@@ -19,5 +19,7 @@ io.on('connection', function(socket) {
 
 http.listen(3000, function() {
 	console.log('listening on *:3000');
+	var d = new Date();
+	console.log('Server started at ' + d);
 	console.log('Welcome to NodeChat');
 });

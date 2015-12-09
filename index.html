@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	  <head>
-	    <title>( ͡↑ ͜ʖ ͡↑)</title>
+	    <title>NodeChat ( ͡↑ ͜ʖ ͡↑)</title>
 	    <style>
 	    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 	      * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -16,6 +16,10 @@
 	      	bottom: 0; 
 	      	width: 100%; 
 	      }
+	      #time {
+	      	padding: 10px;
+	      	text-align: center;
+	      }
 	      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; color: #00FF00; background-color: black;}
 	      form button { width: 9%; background-color: #EE0000; border: 1px solid #EE0000; padding: 10px; color: white;}
 	      #messages { list-style-type: none; margin: 0; padding: 0; font-style: bold; overflow: hidden;}
@@ -24,6 +28,9 @@
 	    </style>
 	  </head>
   	<body>
+  	<div id="time">
+  		Welcome to NodeChat: Please enter a username
+  	</div>
 	    <ul id="messages"></ul>
 	    <form action="">
 	      <input id="m" autocomplete="off" tabindex="0" placeholder="Enter message here!"/><button>Send</button>
@@ -44,6 +51,13 @@
     	socket.on('chat message', function(msg) {
     		$('#messages').append($('<li>').text(userName + ": " + msg));
     	});
+
+    var displayTime = document.getElementById('time');
+    var  d = new Date();
+   	d.getHours();
+   	d.getMinutes();
+   	d.getSeconds();
+   	displayTime.innerHTML = "Local time: " + d;
     </script>
   	</body>
 </html>
