@@ -14,7 +14,7 @@ This will print the following:
 Visit *localhost://3000* in your web browser to start using NodeChat
 
 
-## Known bugs:
+### Known bugs:
 
 -	Dynamic usernames currently static
 -	Time not updating
